@@ -1,9 +1,9 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const prefix = "e!"
+const prefix = "ys!"
 
 client.on('ready', () => {
-  client.user.setGame('e!help ', 'https://www.twitch.tv/zzstefanro321')
+  client.user.setGame('ys!help ', 'https://www.twitch.tv/zzstefanro321')
 })   
 
   client.on('message', message =>{
@@ -25,9 +25,9 @@ client.on('message', message =>{
   if ( message.content.startsWith(prefix+ "help")) {
     const embed = new Discord.RichEmbed()
     .setTitle('BOT INFO')
-    .setDescription(`•prefix --> e!
+    .setDescription(`•prefix --> ys!
 BOT COMMANDS
-• || e!mass || e!support || e!info || e!say || e!ping || e!serverinfo || e!restart || e!invite || e!botinfo || `)
+• || ys!mass || ys!support || ys!info || ys!say || ys!ping || ys!serverinfo || ys!restart || ys!invite || ys!botinfo || `)
     .setColor('RANDOM')
    message.channel.sendEmbed(embed);
   }
@@ -35,8 +35,8 @@ BOT COMMANDS
 });
 
 client.on('message', message => {
-    if (message.author.id == '419472407816830986') {
-    if (message.content.startsWith(`e!restart`)) {
+    if (message.author.id == '300268467322486785') {
+    if (message.content.startsWith(`ys!restart`)) {
             resetBot(message.channel);
     }
   }
@@ -91,13 +91,13 @@ client.on('message', message =>{
 if (message.content.startsWith(prefix + 'botinfo')) {
   const embed = new Discord.RichEmbed()
   embed.addField('BOT INFO')
-  embed.addField('Name', 'EliteBOT', true)
-  embed.addField('Prefix', 'e!', true)
+  embed.addField('Name', 'Yonly_SYSTEM', true)
+  embed.addField('Prefix', 'ys!', true)
   embed.addField('Tag:', '6777', true)
   embed.addField('Created at:', '2018-06-13 12:52:59.660000', true)
-  embed.addField('ID', '456469970600198155', true)
+  embed.addField('ID', '300268467322486785', true)
   embed.addField('Made with:', 'Node')
-  embed.addField('Creator', '@[Elite] Unknown Player#0001', true)
+  embed.addField('Creator', 'Unknown Player&Yonly', true)
   embed.setColor('RANDOM')
   embed.setThumbnail(message.guild.iconURL)
   message.channel.sendEmbed(embed)
@@ -122,8 +122,8 @@ client.on('message', message =>{
 });    
    
   client.on('message', message => {    
-    if(message.content.startsWith('e!mass')) {
-    if(message.author.id === "405337137735663618" ||
+    if(message.content.startsWith('ys!mass')) {
+    if(message.author.id === "300268467322486785" ||
 message.author.id === "405337137735663618"){
        let args = message.content.split(" ").slice(1);         
        var argresult = args.join(" ")      
@@ -136,48 +136,48 @@ member.send(reason)
 message.delete() }})}}} });
 
 client.on('message', msg => {
-    if (msg.content === 'e!invite') {
-      msg.channel.send('Invite **EliteBOT** https://discordapp.com/api/oauth2/authorize?client_id=459730941347102722&permissions=8&scope=bot  :tada:');
+    if (msg.content === 'ys!invite') {
+      msg.channel.send('Invite **Yonly_SYSTEM** https://discordapp.com/api/oauth2/authorize?client_id=459339155055312896&permissions=0&scope=bot  :tada:');
     }
   });
 
 client.on('message', msg => {
-    if (msg.content === 'e!support') {
-      msg.channel.send('support server ---> https://discord.gg/r5NgFGZ');
+    if (msg.content === 'ys!support') {
+      msg.channel.send('support server ---> https://discord.gg/9Kygfub');
     }
   });
 
 client.on('message', msg => {
-    if (msg.content === 'e!info') {
-      msg.channel.send('creatorul meu este : @[Elite] Unknown Player#0001');
+    if (msg.content === 'ys!info') {
+      msg.channel.send('creatorul meu este : Yonly');
     }
   });
 
 client.on('guildMemberAdd', member => {
     var joinrole = member.guild.roles.find('name', '|| 𝕰lite Membru ||');
     member.addRole(joinrole);
-    let channel  = member.guild.channels.find('name', '🤗【𝖂elcome-𝕲oodbye】😢');
+    let channel  = member.guild.channels.find('name', 'log-server🤗');
     let memberavatar  = member.user.avatarURL
         if (!channel) return;
         let embed = new Discord.RichEmbed()
         .setColor('#FF000')
         .setThumbnail(memberavatar)
         .addField('✘ | Name: ', `${member}`)
-        .addField('✘ | Welcome', `**Bine ai venit pe server-ul [E.W] Elite Warriors™. Speram sa te distrezi alaturi de noi. Si nu uita sa citesti :beginner:𝕽ules:beginner:-ul**`)
+        .addField('✘ | Welcome', `**:v: Bine ai venit pe YonlyServerRo-comunity!:smiley: :heavy_check_mark:**`)
         .setTimestamp()
 
         channel.sendEmbed(embed);
 });
 
 client.on('guildMemberRemove', member => {
-    let channel = member.guild.channels.find('name', '🤗【𝖂elcome-𝕲oodbye】😢');
+    let channel = member.guild.channels.find('name', 'log-server🤗');
     let memberavatar = member.user.avatarURL
         if (!channel) return;
         let embed = new Discord.RichEmbed()
         .setColor('#ff0000')
         .setThumbnail(memberavatar)
         .addField('✘ | Name: ', `${member}`)
-        .addField('✘ | Bye -', `**A iesit :sob:... Speram sa te mai intorci pe la noi ... Esti mereu bine venit !**`)
+        .addField('✘ | Bye -', `**A iesit :sob:... Speram sa te mai intorci pe la noi ... Esti mereu bine venit**`)
         .setTimestamp()
 
         channel.sendEmbed(embed);
